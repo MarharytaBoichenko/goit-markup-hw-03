@@ -1,0 +1,318 @@
+/* выбрать  палитру
+#212121  черный вторичный 
+#2196F3 голубой  ссылки  кнопка
+#757575  серый -  основной  
+#FFFFFF  белый Н1 и   цвет фона основной
+#000000  черный  логотип
+rgba(255, 255, 255, 0.6)  контакты  футер 
+#2F303A  цвет фон героя и футера
+
+ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+:root {
+  --primary-text-color: #757575;
+  --first-accent-color: #2196f3;
+  --title-color: #212121;
+  --second-accent-color: #ffffff;
+  --logo-color: #000;
+
+  --hero-footer-color: #2f303a;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --team-bcg-color: #f5f4fa;
+  --header-border-color: #ececec;
+  --list-border-color: #eeeeee;
+
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
+}
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--second-accent-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--header-border-color);
+}
+.logo {
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--logo-color);
+  text-decoration: none;
+}
+
+.first-acent {
+  color: var(--first-accent-color);
+}
+.second-acent {
+  color: var(--second-accent-color);
+}
+.link {
+  color: var(--title-color);
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  color: var(--first-accent-color);
+}
+.current {
+  color: var(--first-accent-color);
+}
+.contacts .link {
+  color: var(--primary-text-color);
+}
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--first-accent-color);
+}
+
+.site-nav,
+.contacts {
+  display: flex;
+}
+.site-nav-item:not(:last-child),
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav {
+  margin-left: 93px;
+}
+.contacts {
+  margin-left: auto;
+}
+.site-nav .link,
+.contacts .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.section {
+  background-color: yellow;
+}
+
+.button {
+  padding: 10px 32px;
+  color: var(--second-accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: var(--first-accent-color);
+
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--primary-text-color);
+}
+.button-filter {
+  padding: 6px 22px;
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  background-color: var(--team-bcg-color);
+  cursor: pointer;
+}
+.button-filter:hover,
+.button-filter:focus {
+  background-color: var(--first-accent-color);
+  color: var(--second-accent-color);
+}
+.button,
+.button-filter {
+  border-radius: 4px;
+  border: none;
+}
+.filter-list {
+  margin-bottom: 34px;
+}
+/* hero    */
+.hero,
+.address {
+  background-color: var(--hero-footer-color);
+}
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+.hero-title {
+  width: 696px;
+  margin-bottom: 30px;
+  color: var(--second-accent-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+.hero-title,
+.feature-title {
+  text-transform: uppercase;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.works {
+  padding-top: 0;
+  background-color: yellowgreen;
+}
+.section-title {
+  margin-bottom: 50px;
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.feature-title {
+  margin-bottom: 10px;
+  color: var(--title-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: left;
+}
+.feature-list {
+  display: flex;
+}
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+/* как  выставить текст  Особенностей  как на  макете?? */
+
+.works .list {
+  display: flex;
+}
+.works-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team {
+  background-color: var(--team-bcg-color);
+}
+.team .list {
+  display: flex;
+}
+.team-item {
+  padding-bottom: 30px;
+  background-color: var(--second-accent-color);
+  text-align: center;
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-title {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--title-color);
+  font-weight: 500;
+  line-height: 1.19;
+  background-color: teal;
+}
+.team-img {
+  margin-bottom: 30px;
+}
+/* убрать зазор под  фото!!!! */
+.position {
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--primary-text-color);
+}
+
+.client-title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.filter-list {
+  display: flex;
+  justify-content: center;
+}
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+.filter-item {
+  font-size: 16px;
+  line-height: 1.88;
+}
+.client-title,
+.filter-name {
+  text-align: left;
+}
+.portfolio-item {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--list-border-color);
+}
+.address {
+  font-style: normal;
+}
+.map-place {
+  color: var(--second-accent-color);
+}
+.address .link {
+  color: var(--footer-contacts-color);
+}
+.address .link:hover,
+.address .link:focus {
+  color: var(--first-accent-color);
+}
