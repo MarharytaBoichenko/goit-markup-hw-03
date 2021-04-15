@@ -76,14 +76,14 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
+  /* border-bottom: 1px solid var(--header-border-color); */
 }
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--header-border-color);
+  border-bottom: 1px solid var(--header-border-color);
 }
+
 .logo {
   display: block;
   font-family: var(--logo-font);
