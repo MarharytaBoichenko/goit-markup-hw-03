@@ -49,9 +49,7 @@ p {
 }
 img {
   display: block;
-}
-h3 {
-  background-color: yellow;
+  max-width: 100%;
 }
 
 .visually-hidden {
@@ -174,7 +172,8 @@ h3 {
   cursor: pointer;
 }
 .button-filter:hover,
-.button-filter:focus {
+.button-filter:focus,
+.button-filter:active {
   background-color: var(--first-accent-color);
   color: var(--second-accent-color);
 }
@@ -255,6 +254,7 @@ h3 {
 }
 
 .team-item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
   padding-bottom: 30px;
   background-color: var(--second-accent-color);
   text-align: center;
@@ -266,16 +266,11 @@ h3 {
   color: var(--title-color);
   font-weight: 500;
   line-height: 1.19;
-  background-color: teal;
 }
 .team-img {
-  display: block;
   margin-bottom: 30px;
 }
-.team-item {
-  flex-basis: calc((100% - 4 * 30px) / 4);
-}
-/* убрать зазор под  фото!!!! */
+
 .position {
   font-size: 16px;
   line-height: 1.19;
@@ -308,20 +303,16 @@ h3 {
   text-align: left;
 }
 .projects {
-  padding-left: 24px;
-  padding-right: 24px;
-}
-.portfolio-img {
-  margin-bottom: 20px;
+  padding: 20px 24px;
+  border: 1px solid var(--list-border-color);
+  border-top: none;
 }
 
 .portfolio-item {
-  padding-bottom: 20px;
-  flex-basis: calc((100% - 9 * 30px) / 9);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--list-border-color);
+  margin-bottom: 20px;
+  flex-basis: calc((100% - 3 * 30px) / 3);
 }
+
 .page-footer {
   padding-bottom: 60px;
   padding-top: 60px;
@@ -335,7 +326,6 @@ h3 {
   color: var(--second-accent-color);
 }
 .address .link {
-  /* display: block; */
   color: var(--footer-contacts-color);
 }
 .address-item:not(:last-child) {
