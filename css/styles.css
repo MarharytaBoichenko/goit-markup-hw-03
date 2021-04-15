@@ -43,13 +43,17 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+}
+h3 {
+  background-color: yellow;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -76,11 +80,14 @@ p {
   align-items: center;
 }
 .header {
+  padding-top: 24px;
+  padding-bottom: 25px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--header-border-color);
 }
 .logo {
+  display: block;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
@@ -132,16 +139,14 @@ p {
 .site-nav .link,
 .contacts .link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.section {
+/* .section {
   background-color: yellow;
-}
+} */
 
 .button {
   padding: 10px 32px;
@@ -178,12 +183,9 @@ p {
   border-radius: 4px;
   border: none;
 }
-.filter-list {
-  margin-bottom: 34px;
-}
 /* hero    */
 .hero,
-.address {
+.page-footer {
   background-color: var(--hero-footer-color);
 }
 .hero {
@@ -192,15 +194,17 @@ p {
   text-align: center;
 }
 .hero-title {
-  width: 696px;
+  width: calc(100% / 12 * 8);
   margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
   color: var(--second-accent-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  text-align: center;
+  /* text-align: center; */
 }
 .hero-title,
 .feature-title {
@@ -210,9 +214,14 @@ p {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
 .works {
   padding-top: 0;
-  background-color: yellowgreen;
 }
 .section-title {
   margin-bottom: 50px;
@@ -230,34 +239,27 @@ p {
   line-height: 1.14;
   text-align: left;
 }
-.feature-list {
-  display: flex;
+.item {
+  margin-top: 30px;
+  margin-left: 30px;
 }
-.feature-item:not(:last-child) {
-  margin-right: 30px;
+.feature-item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
 }
-/* как  выставить текст  Особенностей  как на  макете?? */
 
-.works .list {
-  display: flex;
-}
-.works-item:not(:last-child) {
-  margin-right: 30px;
+.works-item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
 }
 .team {
   background-color: var(--team-bcg-color);
 }
-.team .list {
-  display: flex;
-}
+
 .team-item {
   padding-bottom: 30px;
   background-color: var(--second-accent-color);
   text-align: center;
 }
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .team-title {
   margin-bottom: 10px;
   font-size: 16px;
@@ -267,7 +269,11 @@ p {
   background-color: teal;
 }
 .team-img {
+  display: block;
   margin-bottom: 30px;
+}
+.team-item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
 }
 /* убрать зазор под  фото!!!! */
 .position {
@@ -277,6 +283,8 @@ p {
 }
 
 .client-title {
+  margin-bottom: 4px;
+
   color: var(--title-color);
   font-weight: 700;
   font-size: 18px;
@@ -285,6 +293,7 @@ p {
 }
 .filter-list {
   display: flex;
+  margin-bottom: 34px;
   justify-content: center;
 }
 .filter-item:not(:last-child) {
@@ -298,21 +307,44 @@ p {
 .filter-name {
   text-align: left;
 }
+.projects {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.portfolio-img {
+  margin-bottom: 20px;
+}
+
 .portfolio-item {
+  padding-bottom: 20px;
+  flex-basis: calc((100% - 9 * 30px) / 9);
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--list-border-color);
 }
+.page-footer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
 .address {
+  width: calc(100% / 12 * 3);
   font-style: normal;
 }
 .map-place {
+  margin-bottom: 9px;
   color: var(--second-accent-color);
 }
 .address .link {
+  /* display: block; */
   color: var(--footer-contacts-color);
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .address .link:hover,
 .address .link:focus {
   color: var(--first-accent-color);
+}
+.footer-logo {
+  margin-bottom: 20px;
 }
