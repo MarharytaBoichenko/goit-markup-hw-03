@@ -1,21 +1,3 @@
-/* выбрать  палитру
-#212121  черный вторичный 
-#2196F3 голубой  ссылки  кнопка
-#757575  серый -  основной  
-#FFFFFF  белый Н1 и   цвет фона основной
-#000000  черный  логотип
-rgba(255, 255, 255, 0.6)  контакты  футер 
-#2F303A  цвет фон героя и футера
-
- */
-html {
-  box-sizing: border-box;
-}
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
 :root {
   --primary-text-color: #757575;
   --first-accent-color: #2196f3;
@@ -32,6 +14,15 @@ html {
   --main-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
 }
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   font-family: var(--main-font);
   font-size: 14px;
@@ -128,7 +119,7 @@ img {
   margin-right: 50px;
 }
 
-.site-nav {
+.nav {
   margin-left: 93px;
 }
 .contacts {
